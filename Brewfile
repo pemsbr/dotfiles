@@ -9,6 +9,8 @@ brew "gh"
 brew "git"
 # Mac App Store command-line interface
 brew "mas"
+# Voice and text chat software
+cask "discord"
 # Typeface made for developers
 cask "font-jetbrains-mono"
 # JetBrains tools manager
@@ -19,6 +21,8 @@ cask "logitech-options"
 cask "tower"
 # Open-source code editor
 cask "visual-studio-code"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "1Password 7", id: 1333542190
 mas "Craft", id: 1487937127
 mas "Save to Raindrop.io", id: 1549370672
