@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 # GitHub command-line tool
@@ -8,6 +9,10 @@ brew "gh"
 brew "mas"
 # Typeface made for developers
 cask "font-jetbrains-mono"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
+# Software for Logitech devices
+cask "logitech-options"
 # Git client focusing on power and productivity
 cask "tower"
 # Open-source code editor
