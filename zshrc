@@ -109,6 +109,9 @@ unsetopt PROMPT_SP
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+
 SPACESHIP_PROMPT_ORDER=(
   # time          # Time stamps section
   # user          # Username section
@@ -145,5 +148,5 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
+# Load "New" Completion System
+autoload -Uz compinit && compinit

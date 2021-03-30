@@ -1,10 +1,12 @@
-# Taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
-
-# Brews (Packages)
+# GitHub command-line tool
 brew "gh"
-
-# Casks (Applications)
+# Typeface made for developers
+cask "font-jetbrains-mono"
+# Git client focusing on power and productivity
+cask "tower"
+# Open-source code editor
 cask "visual-studio-code"
