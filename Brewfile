@@ -1,4 +1,10 @@
+# Taps
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/core"
-# GitHub command-line tool
+
+# Brews (Packages)
 brew "gh"
+
+# Casks (Applications)
+cask "visual-studio-code"
