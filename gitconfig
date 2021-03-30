@@ -3,3 +3,5 @@
 	email = 4513618+pemsbr@users.noreply.github.com
 [core]
 	editor = code --wait
+[init]
+	defaultBranch = main

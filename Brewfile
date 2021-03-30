@@ -5,6 +5,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 # GitHub command-line tool
 brew "gh"
+# Distributed revision control system
+brew "git"
 # Mac App Store command-line interface
 brew "mas"
 # Typeface made for developers
