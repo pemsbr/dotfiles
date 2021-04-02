@@ -14,6 +14,9 @@
     - ~/Developer
 
 - shell:
+    - command: ./setup_xcode.zsh
+      stdout: true
+      stderr: true
     - command: ./setup_homebrew.zsh
       stdout: true
       stderr: true
