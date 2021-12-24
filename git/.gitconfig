@@ -1,0 +1,13 @@
+[user]
+	name = Pedro Rodrigues
+	email = 4513618+pemsbr@users.noreply.github.com
+[core]
+	excludesfile = /Users/pedro/.gitignore_global
+	editor = code --wait
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

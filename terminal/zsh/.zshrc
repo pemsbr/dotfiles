@@ -1,15 +1,22 @@
-# Path to your oh-my-zsh installation.
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the start of this file.
+[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
+#### END FIG ENV VARIABLES ####
+
+# Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+# Path to dotfiles repository.
+export DOTFILES="$HOME/Developer/dotfiles"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
@@ -20,17 +27,16 @@ ZSH_THEME="spaceship"
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
+# Uncomment one of the following lines to change the auto-update behavior
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
+# DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -42,6 +48,9 @@ DISABLE_AUTO_TITLE="true"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
+# You can also set it to another string to have that shown instead of the default red dots.
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
 # COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
@@ -61,41 +70,26 @@ DISABLE_AUTO_TITLE="true"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  osx
-  fast-syntax-highlighting
-  zsh-autosuggestions
-  zsh-completions
-  yarn
+  dotnet
+  dotenv
+  macos
   npm
+  dir
+  # custom
+  http
+  path
+  pnpm
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-# workaround to remove percent sign
-unsetopt PROMPT_SP
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -106,44 +100,7 @@ unsetopt PROMPT_SP
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-SPACESHIP_CHAR_SYMBOL="❯"
-SPACESHIP_CHAR_SUFFIX=" "
-
-SPACESHIP_PROMPT_ORDER=(
-  # time          # Time stamps section
-  # user          # Username section
-  dir           # Current directory section
-  # host          # Hostname section
-  git           # Git section (git_branch + git_status)
-  # hg            # Mercurial section (hg_branch  + hg_status)
-  package       # Package version
-  node          # Node.js section
-  # ruby          # Ruby section
-  # elixir        # Elixir section
-  xcode         # Xcode section
-  swift         # Swift section
-  # golang        # Go section
-  # php           # PHP section
-  # rust          # Rust section
-  # haskell       # Haskell Stack section
-  # julia         # Julia section
-  # docker        # Docker section
-  # aws           # Amazon Web Services section
-  # venv          # virtualenv section
-  # conda         # conda virtualenv section
-  # pyenv         # Pyenv section
-  # dotnet        # .NET section
-  # ember         # Ember.js section
-  # kubectl       # Kubectl context section
-  # terraform     # Terraform workspace section
-  exec_time     # Execution time
-  line_sep      # Line break
-  # battery       # Battery level and status
-  vi_mode       # Vi-mode indicator
-  jobs          # Background jobs indicator
-  exit_code     # Exit code section
-  char          # Prompt character
-)
-
-# Load "New" Completion System
-autoload -Uz compinit && compinit
+#### FIG ENV VARIABLES ####
+# Please make sure this block is at the end of this file.
+[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+#### END FIG ENV VARIABLES ####

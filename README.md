@@ -2,44 +2,38 @@
 
 ## Steps to bootstrap a new Mac
 
-1. Install Apple's Command Line Tools, which are prerequisites for Git and Homebrew.
+Install without cloning
 
-```zsh
-xcode-select --install
+```
+curl https://raw.githubusercontent.com/pemsbr/dotfiles/HEAD/install.sh | bash
 ```
 
-2. Clone repo into new hidden directory.
+## Sensible macOS defaults
 
-```zsh
-# Use SSH (if set up)...
-git clone git@github.com:pemsbr/dotfiles.git
+When setting up a new Mac, you may want to set some sensible macOS defaults:
 
-# ...or use HTTPS and switch remotes later.
-git clone https://github.com/pemsbr/dotfiles.git
+```
+./macos
 ```
 
-3. Create symlinks in the Home directory to the real files in the repo.
+Install Homebrew formulae
 
-```zsh
-# There are better and less manual ways to do this;
-# investigate install scripts and bootstrapping tools.
+When setting up a new Mac, you may want to install some common Homebrew formulae (after installing Homebrew, of course):
 
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/.hushlogin ~/.hushlogin
+```
+./brew.sh
 ```
 
-4. Install Homebrew, followed by the software listed in the Brewfile.
+Aliases
 
-```zsh
-# These could also be in an install script.
+# oh-my-zsh plugins
 
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# macos: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
 
-# Then pass in the Brewfile location...
-brew bundle --file ~/.dotfiles/Brewfile
+# brew: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
 
-# ...or move to the directory first.
-cd ~/.dotfiles && brew bundle
-```
+# git: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+
+# npm: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+
+# dotnet: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotnet
