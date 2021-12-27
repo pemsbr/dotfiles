@@ -2,15 +2,17 @@
 
 🍎 &nbsp; Sensible macOS defaults
 
-🍺 &nbsp; homebrew
+🍺 &nbsp; Homebrew
 
-🌳 &nbsp; git
+🌳 &nbsp; Git
 
-🌳 &nbsp; git
+🔐 &nbsp; SSH
 
-✨ &nbsp; zsh with oh-my-zsh
+🛠 &nbsp; Zsh
 
-🔐 &nbsp; GitHub with SSH
+✨ &nbsp; Oh My Zsh
+
+🚀 &nbsp; Starship
 
 📦 &nbsp; Global npm packages
 

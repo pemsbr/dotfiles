@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-ZSH="$HOME/.oh-my-zsh"
-ZSH_CUSTOM="$ZSH/custom"
 DEVELOPER=$HOME/Developer
 DOTFILES=$DEVELOPER/dotfiles
 
@@ -52,14 +50,12 @@ setup_gh() {
 }
 
 setup_ohmyzsh() {
-  if [ -d $ZSH ]; then
+  if [ -d $HOME/.oh-my-zsh ]; then
     echo "\033[2mSkipping oh-my-zsh install, it is already installed.\033[m"
   else
     echo "👥 Install oh-my-zsh"
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
-
-  install_ohmyzsh_plugins
 }
 
 install_ohmyzsh_plugins() {
@@ -84,6 +80,11 @@ create_symlinks() {
   done
 }
 
+setup_starship() {
+  mkdir -p $HOME/.config
+  symlink $DOTFILES/zsh/starship.toml $HOME/.config/starship.toml
+}
+
 # TODO: macos defaults (including terminal theme/font/size/settings)
 main() {
   # exit immediately if a command exits with a non-zero status
@@ -100,23 +101,20 @@ main() {
   setup_brew
   setup_gh
   setup_ohmyzsh
+  setup_starship
   create_symlinks
 
   # echo "👉 Cloning into $DOTFILES"
   # TODO
   # gh repo clone pemsbr/dotfiles $DOTFILES -- --depth 1
 
-  echo "🤌 Register aliases"
-  # oh-my-zsh users are encouraged to define aliases within the ZSH_CUSTOM folder.
-  symlink $DOTFILES/shell/aliases.sh $ZSH_CUSTOM/aliases.zsh
-
   echo "📦 Install global npm packages"
   npm install --global pnpm npm-check-updates
 
+  echo "Awesome, all set. 🌈"
+
   # refresh the current shell with the newly installed configuration.
   source $HOME/.zshrc
-  
-  echo "Awesome, all set. 🌈"
 }
 
 main "$@"

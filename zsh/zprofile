@@ -1,4 +1,4 @@
-## Fig environment variables
+# Fig environment variables.
 # Please make sure this block is at the start of this file.
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 
@@ -8,6 +8,6 @@ export DOTFILES="$HOME/Developer/dotfiles"
 # Add homebrew to PATH
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-## Fig environment variables
+# Fig environment variables.
 # Please make sure this block is at the end of this file.
 [ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh

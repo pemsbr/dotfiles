@@ -1,0 +1,11 @@
+[directory]
+read_only = " 🔒"
+
+[dotnet]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[nodejs]
+symbol = "⬢ "
