@@ -59,16 +59,7 @@ setup_ohmyzsh() {
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
 
-  install_ohmyzsh_theme
   install_ohmyzsh_plugins
-}
-
-install_ohmyzsh_theme() {
-  if [ ! -d $ZSH_CUSTOM/themes/spaceship-prompt ]; then
-    echo "🚀 Install oh-my-zsh spaceship theme"
-    gh repo clone spaceship-prompt/spaceship-prompt $ZSH_CUSTOM/themes/spaceship-prompt -- --depth 1
-    symlink $ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme $ZSH_CUSTOM/themes/spaceship.zsh-theme
-  fi
 }
 
 install_ohmyzsh_plugins() {
