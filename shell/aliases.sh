@@ -35,3 +35,11 @@ alias ppub='pnpm publish'
 alias psv='pnpm server'
 # pnpx
 alias px='pnpx'
+
+# send http requests
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+	alias "${method}"="lwp-request -m '${method}'"
+done
+
+# print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
