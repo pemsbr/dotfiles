@@ -2,10 +2,10 @@
 read_only = " 🔒"
 
 [dotnet]
-symbol = " "
+symbol = " " # nerd font glyph
 
 [git_branch]
-symbol = " "
+symbol = " " # nerd font glyph
 
 [nodejs]
 symbol = "⬢ "

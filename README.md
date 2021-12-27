@@ -10,18 +10,19 @@
 
 🛠 &nbsp; Zsh
 
-✨ &nbsp; Oh My Zsh
+✨ &nbsp; [Oh My Zsh][omz]
 
-🚀 &nbsp; Starship
+💫 &nbsp; [Starship prompt][starship]
 
 📦 &nbsp; Global npm packages
 
----
-
-## 🚀 Install
+## Install
 
 ### Git-free
 
 ```
 curl https://raw.githubusercontent.com/pemsbr/dotfiles/HEAD/install.sh | bash
 ```
+
+[omz]: https://github.com/ohmyzsh/ohmyzsh/
+[starship]: https://starship.rs
