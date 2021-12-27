@@ -21,7 +21,7 @@
 ### Git-free
 
 ```
-curl https://raw.githubusercontent.com/pemsbr/dotfiles/HEAD/install.sh | bash
+curl https://raw.githubusercontent.com/pemsbr/dotfiles/HEAD/install.sh | zsh
 ```
 
 [omz]: https://github.com/ohmyzsh/ohmyzsh/
