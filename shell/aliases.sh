@@ -1,3 +1,10 @@
+# oh-my-zsh plugins:
+# macos: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/macos
+# brew: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/brew
+# git: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# npm: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm
+# dotnet: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dotnet
+
 ## pnpm
 alias p='pnpm'
 # packages
