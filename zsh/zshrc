@@ -4,11 +4,11 @@
 
 DISABLE_AUTO_TITLE="true"
 
-# register aliases
-source $DOTFILES/shell/aliases.sh
-
 # refresh installed completions
 autoload -U compinit && compinit
+
+# register aliases
+source "$DOTFILES/shell/aliases.sh"
 
 # load sheldon plugins
 eval "$(sheldon source)"

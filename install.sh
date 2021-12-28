@@ -1,7 +1,5 @@
 #!/usr/bin/env zsh
 
-ZSH=$HOME/.oh-my-zsh
-ZSH_CUSTOM=$ZSH/custom
 DEVELOPER=$HOME/Developer
 DOTFILES=$DEVELOPER/dotfiles
 
@@ -10,19 +8,20 @@ command_exists() {
 }
 
 symlink() {
-  local file=$1
-  local link=$2
-  if [ ! -e "$link" ]; then
-    ln -s "$file" "$link"
-    echo "$link -> $file"
+  local file="$1"
+  local link="$2"
+  if [ ! -e $link ]; then
+    ln -s $file $link
+    echo $link -> $file
   fi
 }
 
 backup() {
-  local file=$1
-  if [ -e "$file" ] && [ ! -L "$file" ]; then
-    mv "$file" "$file.backup"
-    echo "Moved old $file to $file.backup"
+  local file="$1"
+  if [ -e $file ] && [ ! -L $file ]; then
+    file_backup="$file.backup_$(date +%Y-%m-%d_%H-%M-%S)"
+    echo "Found $file, renaming to $file_backup"
+    mv $file $file_backup
   fi
 }
 
@@ -49,34 +48,34 @@ setup_ssh() {
 create_symlinks() {
   echo "🔗 Symlink dotfiles"
   local dotfiles=(
-    $DOTFILES/git/gitattributes
-    $DOTFILES/git/gitconfig
-    $DOTFILES/git/gitignore
-    $DOTFILES/shell/hushlogin
-    $DOTFILES/zsh/zprofile
-    $DOTFILES/zsh/zshrc
+    "$DOTFILES/git/gitattributes"
+    "$DOTFILES/git/gitconfig"
+    "$DOTFILES/git/gitignore"
+    "$DOTFILES/shell/hushlogin"
+    "$DOTFILES/zsh/zprofile"
+    "$DOTFILES/zsh/zshrc"
   )
 
   for file in "${dotfiles[@]}"; do
-    link=$HOME/.$(basename $file)
+    link="$HOME/.$(basename $file)"
     backup $link
     symlink $file $link
   done
 }
 
 setup_sheldon() {
-  mkdir -p $HOME/.sheldon
-  symlink $DOTFILES/zsh/plugins.toml $HOME/.sheldon/plugins.toml
+  mkdir -p "$HOME/.sheldon"
+  symlink "$DOTFILES/zsh/sheldon.toml" "$HOME/.sheldon/plugins.toml"
 }
 
 setup_starship() {
-  mkdir -p $HOME/.config
-  symlink $DOTFILES/zsh/starship.toml $HOME/.config/starship.toml
+  mkdir -p "$HOME/.config"
+  symlink "$DOTFILES/zsh/starship.toml" "$HOME/.config/starship.toml"
 }
 
 install_brew_packages() {
   echo "🍻 Install brew packages"
-  brew bundle --file $DOTFILES/brew/Brewfile
+  brew bundle --file "$DOTFILES/brew/Brewfile"
 }
 
 install_npm_packages() {
@@ -84,18 +83,17 @@ install_npm_packages() {
   npm install --global pnpm npm-check-updates
 }
 
-# TODO: macos defaults (including terminal theme/font/size/settings)
 main() {
   # exit immediately if a command exits with a non-zero status
   set -e
 
   echo "Hello $(whoami)! Let's get you set up! 🚀"
   # ask for the administrator password upfront
-  # sudo -v
+  sudo -v
 
   # TODO: read from input
   echo "📁 mkdir $DEVELOPER"
-  mkdir -p $DEVELOPER
+  mkdir -p "$DEVELOPER"
 
   setup_brew
   setup_ssh
@@ -104,9 +102,9 @@ main() {
   create_symlinks
   install_npm_packages
   
-  if [ ! -d $DOTFILES ]; then
+  if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
-    gh repo clone pemsbr/dotfiles $DOTFILES -- --depth 1
+    gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
   echo "Awesome, all set. 🌈"
