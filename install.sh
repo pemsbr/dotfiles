@@ -12,7 +12,7 @@ symlink() {
   local link="$2"
   if [ ! -e $link ]; then
     ln -s $file $link
-    echo $link -> $file
+    echo "🔗 $link -> $file"
   fi
 }
 
@@ -46,7 +46,6 @@ setup_ssh() {
 }
 
 create_symlinks() {
-  echo "🔗 Symlink dotfiles"
   local dotfiles=(
     "$DOTFILES/git/gitattributes"
     "$DOTFILES/git/gitconfig"
