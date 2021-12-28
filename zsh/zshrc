@@ -2,29 +2,18 @@
 # Please make sure this block is at the start of this file.
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 
-# Path to oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
-# oh-my-zsh plugins
-plugins=(
-  git
-  dotnet
-  dotenv
-  macos
-  npm
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# Register aliases
+# register aliases
 source $DOTFILES/shell/aliases.sh
 
-# Starship prompt
+# refresh installed completions
+autoload -U compinit && compinit
+
+# load sheldon plugins
+eval "$(sheldon source)"
+
+# starship prompt
 eval "$(starship init zsh)"
 
 # Fig environment variables.

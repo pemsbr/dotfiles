@@ -10,7 +10,7 @@
 
 🛠 &nbsp; Zsh
 
-✨ &nbsp; [Oh My Zsh][omz]
+✨ &nbsp; [Sheldon][sheldon]
 
 💫 &nbsp; [Starship prompt][starship]
 
@@ -24,5 +24,5 @@
 curl https://raw.githubusercontent.com/pemsbr/dotfiles/HEAD/install.sh | zsh
 ```
 
-[omz]: https://github.com/ohmyzsh/ohmyzsh/
+[sheldon]: https://github.com/rossmacarthur/sheldon
 [starship]: https://starship.rs
