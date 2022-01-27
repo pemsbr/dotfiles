@@ -79,7 +79,7 @@ install_brew_packages() {
 
 install_npm_packages() {
   echo "📦 Install global npm packages"
-  npm install --global pnpm npm-check-updates
+  npm install --global npm-check-updates
 }
 
 main() {
@@ -103,7 +103,7 @@ main() {
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
-    gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
+    # gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
   echo "Awesome, all set. 🌈"
