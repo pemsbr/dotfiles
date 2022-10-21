@@ -1,7 +1,5 @@
-# Fig environment variables.
-# Please make sure this block is at the start of this file.
-[ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
-
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 DISABLE_AUTO_TITLE="true"
 
 # refresh installed completions
@@ -16,6 +14,5 @@ eval "$(sheldon source)"
 # starship prompt
 eval "$(starship init zsh)"
 
-# Fig environment variables.
-# Please make sure this block is at the end of this file.
-[ -s ~/.fig/fig.sh ] && source ~/.fig/fig.sh
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

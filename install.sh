@@ -47,6 +47,8 @@ setup_ssh() {
 
 create_symlinks() {
   local dotfiles=(
+    "$DOTFILES/config/sheldon/plugins.toml"
+    "$DOTFILES/config/starship.toml"
     "$DOTFILES/git/gitattributes"
     "$DOTFILES/git/gitconfig"
     "$DOTFILES/git/gitignore"
@@ -60,16 +62,6 @@ create_symlinks() {
     backup $link
     symlink $file $link
   done
-}
-
-setup_sheldon() {
-  mkdir -p "$HOME/.sheldon"
-  symlink "$DOTFILES/zsh/sheldon.toml" "$HOME/.sheldon/plugins.toml"
-}
-
-setup_starship() {
-  mkdir -p "$HOME/.config"
-  symlink "$DOTFILES/zsh/starship.toml" "$HOME/.config/starship.toml"
 }
 
 install_brew_packages() {
@@ -96,10 +88,8 @@ main() {
 
   setup_brew
   setup_ssh
-  setup_starship
-  setup_sheldon
   create_symlinks
-  install_npm_packages
+  # install_npm_packages
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
