@@ -64,14 +64,27 @@ create_symlinks() {
   done
 }
 
+create_config_files() {
+  local CONFIG_PATH="config"
+  local files=(
+    "$CONFIG_PATH/sheldon/plugins.toml"
+    "$CONFIG_PATH/starship.toml"
+  )
+
+  for filepath in "${files[@]}"; do
+    link="$HOME/.$filepath"
+    echo $filepath
+    echo $link
+    echo $link:h
+    mkdir -p $link:h # path without filename
+    backup $link
+    symlink "$DOTFILES/$filepath" $link
+  done
+}
+
 install_brew_packages() {
   echo "🍻 Install brew packages"
   brew bundle --file "$DOTFILES/brew/Brewfile"
-}
-
-install_npm_packages() {
-  echo "📦 Install global npm packages"
-  npm install --global npm-check-updates
 }
 
 main() {
@@ -89,7 +102,7 @@ main() {
   setup_brew
   setup_ssh
   create_symlinks
-  # install_npm_packages
+  create_config_files
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
