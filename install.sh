@@ -34,7 +34,8 @@ setup_brew() {
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
 
-  install_brew_packages
+  echo "🍻 Install brew packages"
+  brew bundle --file "$DOTFILES/brew/Brewfile"
 }
 
 setup_ssh() {
@@ -47,8 +48,6 @@ setup_ssh() {
 
 create_symlinks() {
   local dotfiles=(
-    "$DOTFILES/config/sheldon/plugins.toml"
-    "$DOTFILES/config/starship.toml"
     "$DOTFILES/git/gitattributes"
     "$DOTFILES/git/gitconfig"
     "$DOTFILES/git/gitignore"
@@ -62,29 +61,6 @@ create_symlinks() {
     backup $link
     symlink $file $link
   done
-}
-
-create_config_files() {
-  local CONFIG_PATH="config"
-  local files=(
-    "$CONFIG_PATH/sheldon/plugins.toml"
-    "$CONFIG_PATH/starship.toml"
-  )
-
-  for filepath in "${files[@]}"; do
-    link="$HOME/.$filepath"
-    echo $filepath
-    echo $link
-    echo $link:h
-    mkdir -p $link:h # path without filename
-    backup $link
-    symlink "$DOTFILES/$filepath" $link
-  done
-}
-
-install_brew_packages() {
-  echo "🍻 Install brew packages"
-  brew bundle --file "$DOTFILES/brew/Brewfile"
 }
 
 main() {
@@ -102,14 +78,13 @@ main() {
   setup_brew
   setup_ssh
   create_symlinks
-  create_config_files
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
     # gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
-  echo "Awesome, all set. 🌈"
+  echo "Awesome, all set. 🚀"
 
   # refresh the current shell with the newly installed configuration.
   exec zsh -l
