@@ -1,4 +1,3 @@
-tap "gitguardian/tap"
 tap "homebrew/bundle"
 brew "curl"
 brew "gh"
