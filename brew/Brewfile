@@ -1,22 +1,26 @@
 tap "homebrew/bundle"
 brew "curl"
+brew "eza"
 brew "gh"
 brew "git"
 brew "go"
 brew "mas"
+brew "starship"
 brew "transmission-cli"
+brew "zoxide"
 brew "zsh"
-cask "amazon-q"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 cask "bazecor"
 cask "discord"
 cask "docker"
-cask "fig"
 cask "figma"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-monaspace"
 cask "ghostty"
 cask "google-chrome"
+cask "iina"
 cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
 cask "plex-media-server"
@@ -30,12 +34,13 @@ cask "zoom"
 mas "1Blocker", id: 1365531024
 mas "Developer", id: 640199958
 mas "Flighty", id: 1358823008
+mas "Keka", id: 470158793
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
-mas "‎WhatsApp", id: 310633997
+mas "WhatsApp", id: 310633997
 vscode "aaron-bond.better-comments"
 vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "antfu.pnpm-catalog-lens"

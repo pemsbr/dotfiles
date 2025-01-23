@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 DEVELOPER=$HOME/Developer
-DOTFILES=$DEVELOPER/dotfiles
+DOTFILES=$DEVELOPER/pemsbr/dotfiles
 
 command_exists() {
   command -v "$@" >/dev/null 2>&1

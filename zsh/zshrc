@@ -1,12 +1,20 @@
-# Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 DISABLE_AUTO_TITLE="true"
 
-# refresh installed completions
-autoload -U compinit && compinit
+eval "$(starship init zsh)"
 
-# register aliases
-source "$DOTFILES/shell/aliases.sh"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+## zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
+## eza
+alias ls='eza --icons=always'
+
+## pnpm
+alias p='pnpm'
+alias pa='pnpm add'
+alias pad='pnpm add --save-dev'
+alias prm='pnpm remove'
+alias pin='pnpm install'
+alias pun='pnpm uninstall'
