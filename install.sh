@@ -81,7 +81,7 @@ main() {
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
-    # gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
+    gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
   echo "Awesome, all set. 🚀"
