@@ -33,17 +33,18 @@ setup_brew() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
+}
 
+install_brew_packages() {   
   echo "🍻 Install brew packages"
   brew bundle --file "$DOTFILES/brew/Brewfile"
 }
 
 setup_ssh() {
-  if command_exists gh; then
-    echo "🔐 GitHub authentication"
-    gh auth login
-    gh auth status
-  fi
+  echo "🔐 GitHub authentication"
+  brew install gh
+  gh auth login
+  gh auth status
 }
 
 create_symlinks() {
@@ -77,13 +78,15 @@ main() {
 
   setup_brew
   setup_ssh
-  create_symlinks
   
   if [ ! -d "$DOTFILES" ]; then
     echo "👉 Cloning into $DOTFILES"
     gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
+  install_brew_packages
+  create_symlinks
+
   echo "Awesome, all set. 🚀"
 
   # refresh the current shell with the newly installed configuration.
