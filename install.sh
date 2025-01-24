@@ -84,8 +84,8 @@ main() {
     gh repo clone pemsbr/dotfiles "$DOTFILES" -- --depth 1
   fi
   
-  install_brew_packages
   create_symlinks
+  install_brew_packages
 
   echo "Awesome, all set. 🚀"
 

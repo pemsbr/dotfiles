@@ -25,7 +25,6 @@ cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
 cask "plex-media-server"
 cask "raycast"
-cask "safari-technology-preview"
 cask "sf-symbols"
 cask "swish"
 cask "transmission"
@@ -42,7 +41,6 @@ mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 vscode "aaron-bond.better-comments"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "antfu.pnpm-catalog-lens"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
