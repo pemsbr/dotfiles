@@ -5,6 +5,8 @@ brew "gh"
 brew "git"
 brew "go"
 brew "mas"
+brew "node"
+brew "pnpm"
 brew "starship"
 brew "transmission-cli"
 brew "zoxide"
@@ -20,13 +22,14 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-monaspace"
 cask "ghostty"
 cask "google-chrome"
+cask "hyperkey"
 cask "iina"
 cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
+cask "loop"
 cask "plex-media-server"
 cask "raycast"
 cask "sf-symbols"
-cask "swish"
 cask "transmission"
 cask "visual-studio-code"
 cask "zoom"
@@ -34,6 +37,7 @@ mas "1Blocker", id: 1365531024
 mas "Developer", id: 640199958
 mas "Flighty", id: 1358823008
 mas "Keka", id: 470158793
+mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Playgrounds", id: 1496833156
@@ -60,5 +64,6 @@ vscode "pkief.material-icon-theme"
 vscode "redhat.vscode-yaml"
 vscode "remcohaszing.schemastore"
 vscode "richie5um2.vscode-sort-json"
+vscode "svelte.svelte-vscode"
 vscode "vitest.explorer"
 vscode "wix.vscode-import-cost"
