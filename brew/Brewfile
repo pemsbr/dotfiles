@@ -20,16 +20,21 @@ cask "figma"
 cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-monaspace"
+cask "gather"
 cask "ghostty"
 cask "google-chrome"
-cask "hyperkey"
+cask "httpie"
 cask "iina"
 cask "jetbrains-toolbox"
 cask "jordanbaird-ice"
+cask "linear-linear"
 cask "loop"
 cask "plex-media-server"
 cask "raycast"
 cask "sf-symbols"
+cask "superkey"
+cask "tailscale"
+cask "tower"
 cask "transmission"
 cask "visual-studio-code"
 cask "zoom"
@@ -40,8 +45,9 @@ mas "Keka", id: 470158793
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Playgrounds", id: 1496833156
+mas "Raycast Companion", id: 6738274497
 mas "Slack", id: 803453959
+mas "Swift Playground", id: 1496833156
 mas "Telegram", id: 747648890
 mas "WhatsApp", id: 310633997
 vscode "aaron-bond.better-comments"
@@ -49,6 +55,7 @@ vscode "antfu.pnpm-catalog-lens"
 vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "dbaeumer.vscode-eslint"
+vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
