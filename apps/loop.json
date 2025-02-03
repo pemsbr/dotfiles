@@ -1,0 +1,348 @@
+{
+  "actions": [
+    {
+      "direction": "Larger",
+      "keybind": [24]
+    },
+    {
+      "direction": "Smaller",
+      "keybind": [27]
+    },
+    {
+      "cycle": [
+        {
+          "direction": "AlmostMaximize",
+          "keybind": []
+        },
+        {
+          "anchor": 8,
+          "direction": "Custom",
+          "height": 60.185160663841806,
+          "keybind": [],
+          "name": "60%",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 59.63232697740113
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [36],
+      "name": "Almost Maximize"
+    },
+    {
+      "direction": "Center",
+      "keybind": [42]
+    },
+    {
+      "direction": "PreviousScreen",
+      "keybind": [43]
+    },
+    {
+      "direction": "NextScreen",
+      "keybind": [124, 59]
+    },
+    {
+      "cycle": [
+        {
+          "direction": "Maximize",
+          "keybind": []
+        },
+        {
+          "direction": "TopHalf",
+          "keybind": []
+        },
+        {
+          "direction": "TopThird",
+          "keybind": []
+        },
+        {
+          "direction": "TopTwoThirds",
+          "keybind": []
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [126],
+      "name": "Top Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "BottomHalf",
+          "keybind": []
+        },
+        {
+          "direction": "BottomThird",
+          "keybind": []
+        },
+        {
+          "direction": "BottomTwoThirds",
+          "keybind": []
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [125],
+      "name": "Bottom Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "RightHalf",
+          "keybind": []
+        },
+        {
+          "direction": "RightThird",
+          "keybind": []
+        },
+        {
+          "direction": "RightTwoThirds",
+          "keybind": []
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [124],
+      "name": "Right Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "LeftHalf",
+          "keybind": []
+        },
+        {
+          "direction": "LeftThird",
+          "keybind": []
+        },
+        {
+          "direction": "LeftTwoThirds",
+          "keybind": []
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [123],
+      "name": "Left Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "TopLeftQuarter",
+          "keybind": []
+        },
+        {
+          "anchor": 0,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Top Left Sixth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 0,
+          "direction": "Custom",
+          "height": 33.33,
+          "keybind": [],
+          "name": "Top Left Ninth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 0,
+          "direction": "Custom",
+          "height": 66.67,
+          "keybind": [],
+          "name": "Top Left Two Ninths",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 0,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Top Left Third",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 66.67
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [126, 123],
+      "name": "Top Left Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "TopRightQuarter",
+          "keybind": []
+        },
+        {
+          "anchor": 2,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Top Right Sixth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 2,
+          "direction": "Custom",
+          "height": 33.33,
+          "keybind": [],
+          "name": "Top Right Ninth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 2,
+          "direction": "Custom",
+          "height": 66.67,
+          "keybind": [],
+          "name": "Top Right Two Ninths",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 2,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Top Right Third",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 66.67
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [126, 124],
+      "name": "Top Right Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "BottomRightQuarter",
+          "keybind": []
+        },
+        {
+          "anchor": 4,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Bottom Right Sixth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 4,
+          "direction": "Custom",
+          "height": 33.33,
+          "keybind": [],
+          "name": "Bottom Right Ninth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 4,
+          "direction": "Custom",
+          "height": 66.67,
+          "keybind": [],
+          "name": "Bottom Right Two Ninths",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 4,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Bottom Right Third",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 66.67
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [125, 124],
+      "name": "Bottom Right Cycle"
+    },
+    {
+      "cycle": [
+        {
+          "direction": "BottomLeftQuarter",
+          "keybind": []
+        },
+        {
+          "anchor": 6,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Bottom Left Sixth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 6,
+          "direction": "Custom",
+          "height": 33.33,
+          "keybind": [],
+          "name": "Bottom Left Ninth",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 6,
+          "direction": "Custom",
+          "height": 66.67,
+          "keybind": [],
+          "name": "Bottom Left Two Ninths",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 33.33
+        },
+        {
+          "anchor": 6,
+          "direction": "Custom",
+          "height": 50,
+          "keybind": [],
+          "name": "Bottom Left Third",
+          "positionMode": 0,
+          "sizeMode": 0,
+          "unit": 1,
+          "width": 66.67
+        }
+      ],
+      "direction": "Cycle",
+      "keybind": [123, 125],
+      "name": "Bottom Left Cycle"
+    }
+  ],
+  "triggerKey": [56, 59, 55, 58],
+  "version": "1.2.0"
+}
